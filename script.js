@@ -1,5 +1,7 @@
 const show = document.getElementById("show")
 const btn1 = document.getElementById("btn1")
+const btn2 = document.getElementById("btn2")
+const btn3 = document.getElementById("btn3")
 
 let seconds = 0;
 let minutes = 0;
@@ -35,7 +37,23 @@ function startStopwatchBtn(){
 
 
  }
+ function stopStopWatch(){
+    clearInterval(interval);
+    startStopwatchStaus ="stopped"
+ }
+ function pauseStopWatch(){
+    clearInterval(interval);
+    seconds=0;
+    minutes=0;
+    hours = 0;
+    updateDisplay()
+    startStopwatchStaus="stopped"
+
+ }
+
 
 btn1.addEventListener("click", startStopwatchBtn)
+btn2.addEventListener("click", stopStopWatch)
+btn3.addEventListener("click", pauseStopWatch)
 
 
