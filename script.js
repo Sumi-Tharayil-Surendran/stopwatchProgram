@@ -39,6 +39,7 @@ function startStopwatchBtn(){
  }
  function stopStopWatch(){
     clearInterval(interval);
+    updateDisplay()
     startStopwatchStaus ="stopped"
  }
  function pauseStopWatch(){
